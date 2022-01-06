@@ -1,0 +1,66 @@
+
+<h1 class="heading">{{section.settings.heading}}</h1>
+
+{% for block in section.blocks %}
+
+	{% if block.type == "QA" %}
+		
+		<input id="question-{{ forloop.index }}" type="checkbox" class="accordion-input">
+  		<label for="question-{{ forloop.index }}" id="accordion-label">
+		  <p>{{block.settings.question}}</p></label>
+		   
+
+
+		<div class="content">
+			<p>{{block.settings.answer}}</p>
+		</div>
+
+
+		{% elsif block.type == 'headline' %}
+		<h4 >{{block.settings.title}}</h4>
+  
+		
+	{%endif%}
+{% endfor%}
+
+
+
+{% schema%}
+    {
+    	"name": "FAQ",
+    	"settings": [
+			{"type": "richtext","label": "Section Heading","id": "heading"}],
+		"blocks":[
+			{
+			"type": "QA",
+			"name": "Question/Answer",
+			"settings": 
+				[
+					{
+					"type": "richtext",
+					"label": "Customer Question",
+					"id": "question"
+					},					
+					{
+					"type": "textarea",
+					"label": "Answer",
+					"id": "answer"
+					}				
+				]
+			},
+			{
+				"type": "headline",
+				"name": "headline",
+				"settings": [
+					{
+						"type":"text",
+						"label":"headline",
+						"id": "title"
+					}
+				]
+			}
+		]
+
+    }
+
+{% endschema%}
