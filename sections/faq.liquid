@@ -6,8 +6,7 @@
 	{% if block.type == "QA" %}
 		
 		<input id="question-{{ forloop.index }}" type="checkbox" class="accordion-input">
-  		<label for="question-{{ forloop.index }}" id="accordion-label">
-		  <p>{{block.settings.question}}</p></label>
+  		<label for="question-{{ forloop.index }}" class="accordion-label">{{block.settings.question}}</label>
 		   
 
 

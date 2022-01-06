@@ -7005,34 +7005,37 @@ hr {
 
   input.accordion-input {
     display: none;
-}
-
-label#accordion-label {
-    display: block;
+  }
+  
+  .accordion-label {
+    display: block !important;
     padding: .8em 1.5em;
-    margin: 0 0 1px 0;
-    cursor: pointer;
+    margin: 5px 0;
+    cursor: pointer ;
     background: #0C027B;
-    color: #fff;
     border-radius: 3px ;
-    transition: ease .5s;
+    transition:background ease .5s;
     position: relative;
-    -webkit-transition: ease .5s;
-    -moz-transition: ease .5s;
-    -ms-transition: ease .5s;
-    -o-transition: ease .5s ;
+    -webkit-transition:background ease .5s;
+    -moz-transition:background ease .5s;
+    -ms-transition:background ease .5s;
+    -o-transition:background ease .5s;
     -webkit-border-radius: 3px ;
     -moz-border-radius: 3px ;
     -ms-border-radius: 3px ;
     -o-border-radius: 3px ;
 }
+.accordion-label p {
+  color: #fff;
+}
 
-label#accordion-label:hover {
+.accordion-label:hover {
     background: #1403cf;
  }
 
-#accordion-label::after {
+ .accordion-label::after {
     content: '+';     
+    color: #fff;
     font-size: 22px;
     font-weight: bold;
     position: absolute;
